@@ -1,0 +1,80 @@
+{
+  "xsappname": "userInfo",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of getuserinfo",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    },
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "display"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Country",
+      "description": "Country",
+      "valueType": "s"
+    },
+    {
+      "name": "City",
+      "description": "City",
+      "valueType": "string"
+    },
+    {
+      "name": "EmployeeNum",
+      "description": "EmployeeNum",
+      "valueType": "int"
+    },
+    {
+      "name": "Groups",
+      "description": "Groups",
+      "valueType": "s"
+    },
+    {
+      "name": "UserId",
+      "description": "UserId",
+      "valueType": "s"
+    },
+    {
+      "name": "UserUUId",
+      "description": "UserUUId",
+      "valueType": "s"
+    },
+    {
+      "name": "FirstName",
+      "description": "FirstName",
+      "valueType": "s"
+    },
+    {
+      "name": "LastName",
+      "description": "LastName",
+      "valueType": "s"
+    },
+    {
+      "name": "Email",
+      "description": "Email",
+      "valueType": "s"
+    },
+    {
+      "name": "UserType",
+      "description": "UserType",
+      "valueType": "s"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": ["uaa.user"]
+    },
+    {
+      "name": "Viewer",
+      "description": "View all",
+      "scope-references": ["$XSAPPNAME.Display"],
+      "attribute-references": ["UserId","FirstName", "LastName", "Email", "UserType", "Country", "City", "EmployeeNum", "Groups", "UserUUId" ]
+    }
+  ]
+}

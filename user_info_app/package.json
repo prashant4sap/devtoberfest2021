@@ -1,0 +1,24 @@
+{
+  "name": "userinfo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Prashant Patil",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/approuter": "6.5.0",
+    "@sap/xsenv": "latest",
+    "@sap/xssec": "latest",
+    "cfenv": "1.2.2",
+    "express": "*",
+    "jwt-decode": "2.2.0",
+    "request": "latest",
+    "request-promise": "latest",
+    "xml2js": "latest",
+    "body-parser": "^1.19.0"
+  }
+}
